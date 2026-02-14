@@ -21,18 +21,10 @@
         });
     });
 
-    // Waitlist form
-    document.querySelectorAll('.waitlist-form').forEach(form => {
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            const input = form.querySelector('input[type="email"]');
-            const btn = form.querySelector('button');
-            if (!input.value) return;
-            const orig = btn.innerHTML;
-            btn.innerHTML = '✓ You\'re on the list!';
-            btn.style.background = '#22c55e';
-            input.value = '';
-            setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 3000);
+    // Whop CTA tracking (optional analytics)
+    document.querySelectorAll('a[href*="whop.com"]').forEach(link => {
+        link.addEventListener('click', () => {
+            if (typeof gtag === 'function') gtag('event', 'whop_click', { plan: link.href.split('plan=')[1] || 'general' });
         });
     });
 
