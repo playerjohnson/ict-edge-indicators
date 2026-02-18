@@ -264,3 +264,25 @@ label { display: block; margin-bottom: 6px; font-size: .82rem; font-weight: 600;
 /* ── Footer contact ── */
 .footer-contact { color: var(--accent); transition: color .2s; }
 .footer-contact:hover { color: var(--accent-hover); text-decoration: underline; }
+
+/* Focus Visible - Keyboard Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent, #58a6ff);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent, #58a6ff);
+  outline-offset: 2px;
+}
+
+.skip-link:focus {
+  outline: 2px solid var(--accent, #58a6ff);
+  outline-offset: 2px;
+}
