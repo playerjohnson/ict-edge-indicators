@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://playerjohnson.github.io/ict-edge-indicators/sitemap.xml
+Sitemap: https://anthonyjohnson.dev/ict-edge-indicators/sitemap.xml
