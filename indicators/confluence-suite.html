@@ -68,20 +68,51 @@
 <div class="ind-hero"><span class="indicator-tier tier-elite" style="margin-bottom:16px;display:inline-block">Elite</span><h1>ICT Confluence Suite</h1><p>The ultimate all-in-one: all five indicators merged with confluence scoring, real-time dashboard and priority alerts.</p>
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
-<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — ICT Confluence Suite on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>All-in-One</h4><p>OBs, FVGs, sessions, NWOG/NDOG, HTF bias in one optimised script</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Confluence Scoring</h4><p>Higher scores when multiple ICT concepts align at the same level</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Real-Time Dashboard</h4><p>Bias, active zones, session times, confluence — all at a glance</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Unified Settings</h4><p>Single panel with presets for scalping, intraday, swing</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Priority Alerts</h4><p>Ranked by confluence score — only highest-probability setups</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Webhook Support</h4><p>Discord, Telegram or custom webhook notifications</p></div></div>
+<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — ICT Confluence Suite dashboard on NAS100 5m</span></div>
+
+<h2>Every ICT Tool. One Script.</h2>
+<p>The ICT Confluence Suite combines all five individual ICT Edge indicators into a single, optimised Pine Script v6 indicator. One script replaces five — eliminating the TradingView indicator limit problem, reducing chart loading time, and enabling features that are only possible when all tools share data: live confluence scoring, cross-indicator alerts, and a unified settings panel.</p>
+<p>This is the flagship indicator. If you're serious about trading ICT methodology, this is the tool built for that purpose.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>All 5 Indicators Unified</h4><p>Smart Money Order Blocks, Fair Value Gap Scanner, Session &amp; Hourly Opens, NWOG/NDOG Detector, and Higher Timeframe Bias — all running from a single script with a single settings panel. Toggle any component on or off independently. Full feature parity with the individual indicators.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Live Confluence Scoring</h2><p>The suite's exclusive feature: a real-time confluence score based on active conditions across all components simultaneously. When price is inside an Order Block AND an FVG AND in a Kill Zone AND with HTF bias alignment, the confluence score is high — the system shows you exactly how many factors are aligned, so you know which setups have the most backing.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Unified Real-Time Dashboard</h4><p>A single compact panel showing: HTF bias across all monitored timeframes, active OB/FVG count, current kill zone status, nearest NWOG/NDOG levels, and the live confluence score. Everything you need to assess a setup without reading multiple indicators.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Cross-Indicator Confluence Alerts</h4><p>Alerts that no individual indicator can offer: fire when price enters an OB that also contains an FVG, when an OB CE touch occurs during a kill zone, or when confluence score exceeds a threshold. These are the highest-quality ICT entry signals, automated.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Optimised Performance</h4><p>Running five separate indicators creates redundant calculations — each one independently calculating ATR, swing detection, and timeframe requests. The Confluence Suite shares all calculations internally, significantly reducing chart load time and eliminating repainting edge cases that can occur between separate scripts.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Single Settings Panel</h4><p>All configuration for all five tools in one place, organised by component. No switching between indicators to adjust settings. Save and load the entire configuration as a single TradingView settings preset.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">Master toggles, unified themes, confluence thresholds, dashboard layout, webhook URL, presets</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">All TradingView markets. Optimised for forex/indices on 1m-4H.</p>
-<div class="blog-cta mt-lg"><h3>Get Access to ICT Confluence Suite</h3><p>Available on the Elite plan and above.</p><a href="https://whop.com/ict-edge-indicators/elite-plan-34/" target="_blank">Subscribe on Whop →</a></div>
+
+<h2>Confluence Scoring</h2>
+<p>The confluence score ranges from 0 to 5+. Each of the following conditions adds to the score:</p>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Confluence Factors</div>
+<div class="settings-row"><span class="setting-name">Active Order Block</span><span class="setting-default">+1</span><span class="setting-desc">Price is within an active (unmitigated) bullish or bearish OB.</span></div>
+<div class="settings-row"><span class="setting-name">FVG Present</span><span class="setting-default">+1</span><span class="setting-desc">An unfilled FVG overlaps with the current price zone.</span></div>
+<div class="settings-row"><span class="setting-name">Kill Zone Active</span><span class="setting-default">+1</span><span class="setting-desc">Current time is within London KZ, NY KZ, or Silver Bullet window.</span></div>
+<div class="settings-row"><span class="setting-name">HTF Bias Aligned</span><span class="setting-default">+1</span><span class="setting-desc">TF2 and TF3 bias matches the direction of the setup.</span></div>
+<div class="settings-row"><span class="setting-name">NWOG / NDOG Proximity</span><span class="setting-default">+1</span><span class="setting-desc">Price is within or approaching an unfilled weekly or daily gap level.</span></div>
+</div>
+</div>
+<p>A score of 3+ is a tradeable setup. A score of 4–5 is a high-conviction ICT setup. Use the confluence threshold alert to be notified automatically when conditions align.</p>
+
+<h2>Settings Reference</h2>
+<p>The Confluence Suite shares all settings from the individual indicators, organised by component in the settings panel. Refer to each indicator's settings documentation for the full reference. Suite-specific settings:</p>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Confluence Suite</div>
+<div class="settings-row"><span class="setting-name">Show Confluence Score</span><span class="setting-default">On</span><span class="setting-desc">Displays the live score on the dashboard.</span></div>
+<div class="settings-row"><span class="setting-name">Confluence Alert Threshold</span><span class="setting-default">3</span><span class="setting-desc">Minimum score to trigger the confluence alert. Set to 3 for tradeable setups, 4 for high-conviction only.</span></div>
+<div class="settings-row"><span class="setting-name">Dashboard Position</span><span class="setting-default">Top Right</span><span class="setting-desc">Position of the unified dashboard panel.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>All markets and all timeframes. The Confluence Suite is designed to be a permanent fixture on your primary trading chart. Add it once, configure once, and have the complete ICT toolkit active at all times. Most traders run it on their execution timeframe (5m or 15m) with MTF settings configured for the 1H and 4H reference frames.</p>
+
+<h2>Who Is This For?</h2>
+<p>The Elite plan and Confluence Suite is for traders who have moved past learning individual ICT concepts and want a production-grade tool for live trading. If you're still building familiarity with order blocks, FVGs, and session levels, start with the Starter or Pro plan and use the individual indicators to learn each concept separately. When you're ready to trade them as a unified system, the Confluence Suite is the upgrade.</p>
+<div class="blog-cta mt-lg"><h3>Get Access to ICT Confluence Suite</h3><p>Available on the Elite plan.</p><a href="https://whop.com/ict-edge-indicators/elite-plan-34/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>
 </main>

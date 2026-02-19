@@ -68,19 +68,49 @@
 <div class="ind-hero"><span class="indicator-tier tier-pro" style="margin-bottom:16px;display:inline-block">Pro</span><h1>NWOG / NDOG Detector</h1><p>Automatically plots New Week and New Day Opening Gaps with consequent encroachment, direction and fill tracking.</p>
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
-<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — NWOG / NDOG Detector on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>NWOG Detection</h4><p>Gap between Friday close and Monday open — key weekly level</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>NDOG Detection</h4><p>Daily close-to-open gap analysis</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>CE Levels</h4><p>Consequent encroachment midpoint — high-probability reaction level</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Gap Direction</h4><p>Colour-coded bullish/bearish gap indication</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Fill Tracking</h4><p>Tracks filled, partially filled and open gaps</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Gap Alerts</h4><p>New gaps, CE touches, full fills</p></div></div>
+<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — NWOG / NDOG Detector on EUR/USD 4H</span></div>
+
+<h2>What Are NWOGs and NDOGs?</h2>
+<p>A New Week Opening Gap (NWOG) is the gap between Friday's close and Sunday's open in forex markets — the price range that was skipped over the weekend when markets were closed. A New Day Opening Gap (NDOG) is the same concept applied daily: the gap between the previous day's close and the current day's open.</p>
+<p>In ICT methodology, these gaps are institutional reference levels. Price has a strong tendency to return and fill these gaps — or at minimum, reach the Consequent Encroachment (CE) at the 50% level. This makes NWOGs and NDOGs some of the most reliably predictive levels in the entire ICT toolkit. This indicator automates their detection and tracking for both weekly and daily timeframes simultaneously.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Automatic NWOG Detection</h4><p>Identifies New Week Opening Gaps across all forex pairs and crypto markets. Plots the full gap zone as a box, labels the gap direction (bullish/bearish), and tracks whether the gap has been filled. Up to 20 NWOGs can be displayed simultaneously for historical analysis.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Automatic NDOG Detection</h4><p>Identifies New Day Opening Gaps on all markets. Particularly useful on indices (US30, NAS100) and crypto which have daily gaps more frequently than forex. Displays up to 20 NDOGs with full fill tracking.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Consequent Encroachment (CE) Levels</h4><p>Plots the 50% midpoint of every NWOG and NDOG. The CE is the precision target and entry level in ICT — price reaching the CE of a gap is a high-probability reversal or continuation signal depending on higher timeframe context.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Fill Tracking</h4><p>Gaps automatically change state when price fills them. Fully filled gaps can be shown or hidden — keeping the chart focused on unfilled gaps that remain relevant reference levels.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Gap Direction Labels</h4><p>Each gap is labelled with its direction, size, and fill status. Instantly see at a glance which gaps are open, how large they are, and whether they're bullish or bearish.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Box Extension Control</h4><p>Configure how far each gap box extends into the future. Wider extensions give more visual context for when price might return to fill; tighter extensions keep the chart clean during consolidation periods.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">Show/hide NWOG/NDOG, gap colours, CE line style, gap count, fill opacity, box extension</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">Most effective on forex (Sunday gaps) and futures. Use on 15m-4H.</p>
+
+<h2>Settings Reference</h2>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">NWOG (New Week Opening Gap)</div>
+<div class="settings-row"><span class="setting-name">Show NWOG</span><span class="setting-default">On</span><span class="setting-desc">Toggle NWOG display. Most relevant on forex pairs traded Sunday–Friday.</span></div>
+<div class="settings-row"><span class="setting-name">Max NWOGs Displayed</span><span class="setting-default">4</span><span class="setting-desc">How many weeks of NWOGs to show. 4 gives a month of context. Increase up to 20 for historical analysis.</span></div>
+<div class="settings-row"><span class="setting-name">NWOG Bullish / Bearish Fill</span><span class="setting-default">Green / Red</span><span class="setting-desc">Colour-code gap direction. Bullish gaps (Sunday open above Friday close) vs bearish gaps (Sunday open below Friday close).</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">NDOG (New Day Opening Gap)</div>
+<div class="settings-row"><span class="setting-name">Show NDOG</span><span class="setting-default">On</span><span class="setting-desc">Toggle NDOG display. Most relevant on indices and crypto with frequent daily gaps.</span></div>
+<div class="settings-row"><span class="setting-name">Max NDOGs Displayed</span><span class="setting-default">5</span><span class="setting-desc">Number of daily gaps to display. 5 gives a full trading week of context.</span></div>
+<div class="settings-row"><span class="setting-name">NDOG Colours</span><span class="setting-default">Blue / Amber</span><span class="setting-desc">Distinct from NWOG colours by default to visually separate weekly from daily gaps at a glance.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Consequent Encroachment</div>
+<div class="settings-row"><span class="setting-name">Show CE Levels</span><span class="setting-default">On</span><span class="setting-desc">Recommended on. The 50% CE is the precision entry and target level — the most important line on the gap.</span></div>
+<div class="settings-row"><span class="setting-name">CE Line Style</span><span class="setting-default">Dotted</span><span class="setting-desc">Dotted differentiates CE levels from the gap box borders.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Display</div>
+<div class="settings-row"><span class="setting-name">Show Fully Filled Gaps</span><span class="setting-default">Off</span><span class="setting-desc">Keep filled gaps visible for historical reference. Recommended off during live trading for a cleaner chart.</span></div>
+<div class="settings-row"><span class="setting-name">Box Extension (bars)</span><span class="setting-default">50</span><span class="setting-desc">How far each gap box extends to the right. Increase to 100–200 for longer-term gap reference; decrease on busy lower timeframe charts.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>NWOGs: Forex pairs primarily (EUR/USD, GBP/USD, USD/JPY, all majors and minors). Crypto pairs with weekend trading also produce NWOGs. NDOGs: All markets including indices (US30, NAS100, SPX500), forex, crypto, commodities. Best viewed on 1H–4H for NWOGs; 15m–1H for NDOGs.</p>
+
+<h2>Recommended Setup</h2>
+<p>Enable both NWOG and NDOG with CE levels on. Set NWOG max to 4 (one month of context) and NDOG max to 5 (one week). Use on 1H–4H charts where the gap zones are clearly visible. When price approaches an unfilled NWOG or NDOG, check the CE level — entries at the 50% CE with confirmation from the FVG Scanner or Order Blocks indicator are high-probability ICT setups. NWOGs that align with HTF order blocks are the highest-conviction trades in the ICT playbook.</p>
 <div class="blog-cta mt-lg"><h3>Get Access to NWOG / NDOG Detector</h3><p>Available on the Pro plan and above.</p><a href="https://whop.com/ict-edge-indicators/pro-plan-c2/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>

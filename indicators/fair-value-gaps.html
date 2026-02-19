@@ -68,25 +68,51 @@
 <div class="ind-hero"><span class="indicator-tier tier-starter" style="margin-bottom:16px;display:inline-block">Starter</span><h1>Fair Value Gap Scanner</h1><p>Identifies all imbalances — FVGs, volume imbalances and price imbalances with fill tracking and consequent encroachment levels.</p>
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
-<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Fair Value Gap Scanner on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>Three Imbalance Types</h4><p>FVGs, volume imbalances and price imbalances with distinct styling</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Consequent Encroachment</h4><p>Auto-plots CE (50%) level of each gap — a key ICT entry concept</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Fill Tracking</h4><p>Shows fill percentage, highlights unfilled gaps as targets</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Directional Filtering</h4><p>Show only bullish in discount or bearish in premium</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Multi-Timeframe</h4><p>Overlay HTF FVGs on your current chart</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Gap Alerts</h4><p>New FVGs, CE touches, full fills</p></div></div>
+<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Fair Value Gap Scanner on NAS100 5m</span></div>
+
+<h2>What Are Fair Value Gaps?</h2>
+<p>A Fair Value Gap (FVG) is a three-candle pattern where the middle candle moves so impulsively that a gap is left between candle 1's wick and candle 3's wick — a price range that was never traded. In ICT methodology, price tends to return to fill these imbalances, making FVGs high-probability entry zones.</p>
+<p>This indicator automatically detects, labels, and tracks FVGs and Volume Imbalances in real time, with CE levels, MTF overlay, and fill tracking built in.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Bullish &amp; Bearish FVG Detection</h4><p>Identifies all three-candle imbalance patterns. Bullish FVGs form during upward displacement (gap between candle 1 high and candle 3 low). Bearish FVGs form during downward displacement (gap between candle 1 low and candle 3 high).</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>CE 50% Level</h4><p>Marks the exact midpoint of every FVG. In ICT, the CE of an FVG is a precision entry trigger — price commonly reacts from the 50% level before fully filling the gap.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Volume Imbalances</h4><p>Detects gaps between adjacent candle bodies — a related but distinct concept from FVGs. Volume imbalances act as weaker but still-relevant reaction zones, especially on lower timeframes.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Fill Tracking</h4><p>FVGs change state when price returns and fills them. Fully filled gaps can be hidden or kept visible for reference — useful for tracking how the market has dealt with historical imbalances.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Min Gap Size Filter</h4><p>Filter out insignificant micro-gaps using a minimum size threshold in points. Keeps your chart focused on imbalances large enough to be institutionally relevant.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Multi-Timeframe Overlay</h4><p>Display HTF FVGs on your current chart. Institutional FVGs from the 1H or 4H are more significant than 5m FVGs — the MTF overlay lets you see both without chart switching.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">Imbalance types, gap size filter, colours, fill threshold, CE line style, MTF source</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">All TradingView markets. Most significant on liquid instruments.</p>
+
+<h2>Settings Reference</h2>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Display</div>
+<div class="settings-row"><span class="setting-name">Max FVGs Displayed</span><span class="setting-default">20</span><span class="setting-desc">Maximum FVGs shown at once. Range 1–50. On active markets like NAS100 5m, keep this lower to avoid chart clutter.</span></div>
+<div class="settings-row"><span class="setting-name">Show CE (50%) Level</span><span class="setting-default">On</span><span class="setting-desc">Plots the midpoint of every FVG. The CE is often the most precise entry level — recommended on at all times.</span></div>
+<div class="settings-row"><span class="setting-name">Show Volume Imbalances</span><span class="setting-default">On</span><span class="setting-desc">Displays body-to-body gaps between adjacent candles in addition to wick-based FVGs. Turn off for a cleaner view focused on FVGs only.</span></div>
+<div class="settings-row"><span class="setting-name">Show Fully Filled FVGs</span><span class="setting-default">Off</span><span class="setting-desc">Keep filled gaps visible for historical context. Recommended off for cleaner charts during live trading.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Filtering</div>
+<div class="settings-row"><span class="setting-name">Min Gap Size (points)</span><span class="setting-default">0</span><span class="setting-desc">Minimum FVG size to display. Set to 5–20 points on forex, higher on indices (50–200 for NAS100). Filters out insignificant micro-gaps.</span></div>
+<div class="settings-row"><span class="setting-name">Direction Filter</span><span class="setting-default">All</span><span class="setting-desc">Show All, Bullish Only, or Bearish Only. Use when trading with a strong directional bias to reduce visual noise.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Multi-Timeframe</div>
+<div class="settings-row"><span class="setting-name">Overlay HTF FVGs</span><span class="setting-default">Off</span><span class="setting-desc">Enable to overlay FVGs from a higher timeframe. HTF FVGs carry more institutional significance.</span></div>
+<div class="settings-row"><span class="setting-name">HTF Timeframe</span><span class="setting-default">60 (1H)</span><span class="setting-desc">Source timeframe for HTF FVGs. 1H gaps are significant for intraday; 4H gaps for swing trading.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>All forex, indices, crypto, commodities. FVGs are most actionable on liquid markets with clear directional moves — EUR/USD, GBP/USD, NAS100, US30, and Gold are ideal. Best timeframes: 1m–15m for scalping, 1H–4H for swing entries.</p>
+
+<h2>Recommended Setup</h2>
+<p>Set a minimum gap size appropriate to your market (0.0010 for forex, 50+ for NAS100) to filter micro-imbalances. Enable CE levels and use them as your entry trigger — entering at the 50% CE rather than the FVG open gives a better risk-to-reward while still capturing the fill. Enable the MTF overlay at 1H when trading the 15m. For best results, combine with the Smart Money Order Blocks indicator — an FVG sitting inside an order block is a high-confluence ICT entry setup.</p>
 <div class="blog-cta mt-lg"><h3>Get Access to Fair Value Gap Scanner</h3><p>Available on the Starter plan and above.</p><a href="https://whop.com/ict-edge-indicators/starter-plan8/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>
 </main>
 <footer role="contentinfo" class="site-footer"><div class="footer-inner"><div class="footer-brand"><a href="../" class="nav-logo"><span class="logo-icon">IE</span> ICT Edge</a><p>Professional ICT indicators for TradingView.</p></div></div><div class="footer-bottom"><p>&copy; 2026 ICT Edge Indicators. Trading involves risk. <a href="../privacy.html" style="color:rgba(255,255,255,.5)">Privacy</a> · <a href="../terms.html" style="color:rgba(255,255,255,.5)">Terms</a> · <a href="../risk.html" style="color:rgba(255,255,255,.5)">Risk</a></p></div></footer><script src="../assets/js/core.js"></script><script src="../cookie-consent.js"></script>
-<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/fair-value-gaps-explained.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">Learn FVGs</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">What are fair value gaps and how to trade them</span></p></div>
+<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/fair-value-gaps-explained.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">Learn Fair Value Gaps</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">Complete guide to FVGs and imbalances</span></p></div>
 <!-- Freelance Dev Promo -->
 <div style="background:#111827;border-top:1px solid #1e293b;padding:14px 24px;text-align:center;font-family:-apple-system,system-ui,sans-serif;font-size:13px;">
   <span style="color:#94a3b8;">Need a developer?</span>

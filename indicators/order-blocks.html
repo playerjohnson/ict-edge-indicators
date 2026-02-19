@@ -69,18 +69,55 @@
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
 <div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Smart Money Order Blocks on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>Bullish &amp; Bearish OB Detection</h4><p>Identifies the last down/up candle before an impulsive move with body-based refinement</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Mitigation Tracking</h4><p>OBs change colour when price returns and mitigates the zone</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Breaker Blocks</h4><p>Failed OBs become breakers — high-probability reversal zones</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Refinement Options</h4><p>Body-only, wick-to-wick, or mean threshold refinement</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Multi-Timeframe</h4><p>Overlay HTF order blocks on lower timeframe charts</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Smart Alerts</h4><p>New OBs, zone entries, mitigation events</p></div></div>
+
+<h2>What Are Order Blocks?</h2>
+<p>An order block is the last candle of opposing colour before an impulsive displacement move. In ICT methodology, it marks the price range where institutions accumulated positions before driving price aggressively in one direction. When price returns to this range, remaining institutional orders may still be resting there — creating a high-probability reaction zone.</p>
+<p>This indicator automates the entire process: detection, refinement, mitigation tracking, and breaker identification — all in real time across any market and timeframe.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Bullish &amp; Bearish OB Detection</h4><p>Identifies the last down/up candle before impulsive displacement. Requires a Break of Structure to confirm the OB is valid — filtering out weak moves that don't qualify under ICT methodology.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>CE 50% Line</h4><p>Plots the mean threshold of every OB. The CE (Consequent Encroachment) is the entry signal in ICT — price reaching the 50% level of an OB is the precision entry trigger, giving much better risk-to-reward than the full zone.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Mitigation Tracking</h4><p>OBs change colour when price returns and mitigates the zone. Mitigated OBs can be hidden or kept visible for context — useful for identifying levels where institutions have already been filled.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Breaker Blocks</h4><p>When a mitigated OB fails to hold and price continues through, it flips to a breaker block — a high-probability reversal zone in the opposite direction. Breakers are displayed in a distinct colour to differentiate them from active OBs.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Quadrant Quality Filter</h4><p>Automatically dims low-quality OBs. Bullish OBs forming in premium (above equilibrium) and bearish OBs forming in discount are statistically weaker — the filter flags these so you focus on the highest-probability setups.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Multi-Timeframe Overlay</h4><p>Plot HTF order blocks directly on your current chart. See 1H or 4H OBs while trading the 5m — essential for top-down ICT analysis without switching charts.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">OB count, refinement method, impulse strength, colours, labels, MTF source, alerts</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">All forex, indices, crypto, commodities. Best on 1m-4H.</p>
+
+<h2>Settings Reference</h2>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Display</div>
+<div class="settings-row"><span class="setting-name">Max Order Blocks</span><span class="setting-default">20</span><span class="setting-desc">Maximum number of OBs drawn on chart. Range 1–50. Higher values show more historical context but can clutter lower timeframes.</span></div>
+<div class="settings-row"><span class="setting-name">Show Bullish / Bearish OBs</span><span class="setting-default">On</span><span class="setting-desc">Toggle either direction independently. Useful when trading with a clear directional bias.</span></div>
+<div class="settings-row"><span class="setting-name">Show CE 50% Line</span><span class="setting-default">On</span><span class="setting-desc">Recommended on. The CE is the precision entry level in ICT methodology.</span></div>
+<div class="settings-row"><span class="setting-name">Show Mitigated OBs</span><span class="setting-default">On</span><span class="setting-desc">Keep mitigated zones visible for context, or turn off for a cleaner chart.</span></div>
+<div class="settings-row"><span class="setting-name">Show Breaker Blocks</span><span class="setting-default">On</span><span class="setting-desc">Displays failed OBs that have flipped to breakers.</span></div>
+<div class="settings-row"><span class="setting-name">Label Content</span><span class="setting-default">Full</span><span class="setting-desc">Simple (▲ Bull OB), Strength (adds multiplier and touch count), Full (adds premium/discount context and quality flags).</span></div>
+<div class="settings-row"><span class="setting-name">Max OB Age (bars)</span><span class="setting-default">500</span><span class="setting-desc">OBs older than this number of bars are automatically removed. Increase for longer-term swing trading contexts.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Detection</div>
+<div class="settings-row"><span class="setting-name">Min Impulse Multiplier</span><span class="setting-default">1.0×</span><span class="setting-desc">The displacement candle body must exceed ATR × this value. Increase to 1.5–2.0 for higher-quality OBs only; decrease for scalping on volatile markets.</span></div>
+<div class="settings-row"><span class="setting-name">Require Break of Structure</span><span class="setting-default">On</span><span class="setting-desc">Recommended on. Confirms OBs where displacement breaks a swing point — validates the change in state of delivery per ICT methodology.</span></div>
+<div class="settings-row"><span class="setting-name">Quadrant Quality Filter</span><span class="setting-default">On</span><span class="setting-desc">Dims OBs forming in the wrong market zone (bullish OBs in premium, bearish in discount). Recommended on for beginners.</span></div>
+<div class="settings-row"><span class="setting-name">Multi-Displacement Scan</span><span class="setting-default">On</span><span class="setting-desc">Scans up to 3 candles for displacement, allowing multi-candle OBs. Captures institutional accumulation spread across consecutive candles.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Multi-Timeframe</div>
+<div class="settings-row"><span class="setting-name">Overlay HTF Order Blocks</span><span class="setting-default">Off</span><span class="setting-desc">Enable to show order blocks from a higher timeframe on your current chart.</span></div>
+<div class="settings-row"><span class="setting-name">HTF Timeframe</span><span class="setting-default">60 (1H)</span><span class="setting-desc">The source timeframe for HTF OBs. Common setups: trade 5m/15m with 1H OBs, or trade 15m/1H with 4H OBs.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Alerts</div>
+<div class="settings-row"><span class="setting-name">New OB Formed</span><span class="setting-default">On</span><span class="setting-desc">Fires when a new order block is confirmed by BOS.</span></div>
+<div class="settings-row"><span class="setting-name">Price Enters OB Zone</span><span class="setting-default">On</span><span class="setting-desc">Fires when price enters an active OB — preparation alert to monitor for entry.</span></div>
+<div class="settings-row"><span class="setting-name">CE Touch (Entry Signal)</span><span class="setting-default">On</span><span class="setting-desc">Fires when price touches the 50% CE level — the precision entry alert.</span></div>
+<div class="settings-row"><span class="setting-name">OB Mitigated / Breaker Formed</span><span class="setting-default">On</span><span class="setting-desc">Fires when an OB is fully mitigated or flips to a breaker block.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>All forex pairs, indices (US30, NAS100, SPX), crypto (BTC, ETH), commodities (Gold, Oil). Best timeframes: 1m, 5m, 15m for intraday; 1H, 4H for swing trading. The MTF overlay works on any timeframe combination.</p>
+
+<h2>Recommended Setup</h2>
+<p>Start with <strong>Require BOS: On</strong> and <strong>Quadrant Quality Filter: On</strong> to see only the highest-quality OBs. Set HTF Timeframe to one timeframe above your execution chart (trading 15m → set HTF to 1H). Enable CE Touch alerts and set them on TradingView to notify when price reaches the precision entry level. Combine with the Fair Value Gap Scanner for confluence — an OB that also contains an FVG is a premium entry zone in ICT methodology.</p>
 <div class="blog-cta mt-lg"><h3>Get Access to Smart Money Order Blocks</h3><p>Available on the Starter plan and above.</p><a href="https://whop.com/ict-edge-indicators/starter-plan8/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>

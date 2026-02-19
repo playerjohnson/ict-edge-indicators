@@ -68,25 +68,57 @@
 <div class="ind-hero"><span class="indicator-tier tier-pro" style="margin-bottom:16px;display:inline-block">Pro</span><h1>Session &amp; Hourly Opens</h1><p>Plots session opens, hourly opens, midnight open, and kill zone highlights for time-based ICT reference levels.</p>
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
-<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Session &amp; Hourly Opens on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>Session Opens</h4><p>London, NY, Asia and custom sessions with configurable styles</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Hourly Opens</h4><p>Every hourly open level — core ICT intraday reference points</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Midnight Open</h4><p>True day open (midnight NY time) as key daily reference</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Kill Zone Highlights</h4><p>Background shading for London, NY, Asian kill zones</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>CBDR / Silver Bullet</h4><p>Central Bank Dealer Range and Silver Bullet windows</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Session Alerts</h4><p>Session opens, kill zone starts, level crosses</p></div></div>
+<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Session & Hourly Opens on EUR/USD 15m</span></div>
+
+<h2>Why Session Opens Matter in ICT</h2>
+<p>ICT methodology places enormous weight on session opens as reference points for price delivery. The London Open (3 AM EST), New York Open (8 AM EST), and Midnight Open are not just time markers — they're the price levels around which institutional order flow is orchestrated. Liquidity sweeps, fake-outs, and displacement moves are disproportionately clustered around these opens.</p>
+<p>Hourly opens extend this logic across the full trading day. Every hour's opening price is a potential reference level. This indicator automates the plotting of all session and hourly opens, kill zones, and the Asian range — giving you the complete ICT time-based framework without manual line drawing.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Session Open Lines</h4><p>Plots London (3 AM EST), New York (8 AM EST), and Asia (8 PM EST) opens as horizontal lines extending across the session. Each session is colour-coded and independently togglable. Opening hours are configurable to match your broker's timezone.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Midnight Open</h4><p>The Midnight Open is one of the most important reference levels in ICT. It divides the trading day into two 12-hour periods and acts as a magnetic price level. The indicator plots it with a distinct line and can extend it to the following midnight.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Hourly Opens</h4><p>Plots up to 24 hourly open levels simultaneously. In ICT, each hour's opening price is a delivery reference — price frequently returns to fill the gap between the previous hour's close and the current hour's open. The number of hourly opens and their visual style are fully configurable.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Kill Zones</h4><p>Shaded background regions highlighting the high-probability trading windows: London Kill Zone (2–5 AM EST), New York Kill Zone (7–10 AM EST), optional Asian Range (8 PM – 12 AM EST), and Silver Bullet window (10–11 AM EST). Kill zones are where the majority of ICT setups form.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Asian Range</h4><p>Marks the Asian session range — the consolidation period before the London session breaks out. ICT traders use the Asian range high and low as liquidity targets for the London open move.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Silver Bullet Window</h4><p>Highlights the 10–11 AM EST Silver Bullet window — an ICT-specific session where a distinct three-step setup forms. Toggle independently and combine with the FVG Scanner to identify Silver Bullet entries.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">Toggle sessions, custom times, line styles, kill zone colours, midnight extension, hourly count</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">Forex and indices primarily. Best on 1m-1H for intraday ICT models.</p>
-<div class="blog-cta mt-lg"><h3>Get Access to Session &amp; Hourly Opens</h3><p>Available on the Pro plan and above.</p><a href="https://whop.com/ict-edge-indicators/pro-plan-c2/" target="_blank">Subscribe on Whop →</a></div>
+
+<h2>Settings Reference</h2>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Session Lines</div>
+<div class="settings-row"><span class="setting-name">London / NY / Asia Open</span><span class="setting-default">On</span><span class="setting-desc">Toggle each session independently. Each has configurable colour and hour in EST.</span></div>
+<div class="settings-row"><span class="setting-name">London Open Hour (EST)</span><span class="setting-default">3</span><span class="setting-desc">Default 3 AM EST. Adjust if your broker uses a different session open time or you trade markets with different hours.</span></div>
+<div class="settings-row"><span class="setting-name">Session Line Style</span><span class="setting-default">Dashed</span><span class="setting-desc">Solid, Dashed, or Dotted. Dashed is recommended to distinguish session lines from price bars.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Midnight Open</div>
+<div class="settings-row"><span class="setting-name">Show Midnight Open</span><span class="setting-default">On</span><span class="setting-desc">Recommended on for all ICT traders. One of the most referenced levels in the methodology.</span></div>
+<div class="settings-row"><span class="setting-name">Extend to Next Midnight</span><span class="setting-default">On</span><span class="setting-desc">Extends the Midnight Open line across the full 24-hour period until the next midnight.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Hourly Opens</div>
+<div class="settings-row"><span class="setting-name">Show Hourly Opens</span><span class="setting-default">On</span><span class="setting-desc">Plots horizontal lines at each hour's opening price.</span></div>
+<div class="settings-row"><span class="setting-name">Number of Hourly Opens</span><span class="setting-default">8</span><span class="setting-desc">How many hourly opens to display. Range 1–24. 8 covers a full trading session without chart clutter.</span></div>
+<div class="settings-row"><span class="setting-name">Hourly Line Style</span><span class="setting-default">Dotted</span><span class="setting-desc">Dotted differentiates hourly levels from session open lines visually.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Kill Zones</div>
+<div class="settings-row"><span class="setting-name">London Kill Zone (2–5 AM EST)</span><span class="setting-default">On</span><span class="setting-desc">The pre-London window where the day's initial liquidity run often begins.</span></div>
+<div class="settings-row"><span class="setting-name">NY Kill Zone (7–10 AM EST)</span><span class="setting-default">On</span><span class="setting-desc">Overlaps London close and NY open — highest-probability intraday window for ICT setups.</span></div>
+<div class="settings-row"><span class="setting-name">Asian Range (8 PM–12 AM EST)</span><span class="setting-default">Off</span><span class="setting-desc">Enable if you trade the London open breakout from the Asian range.</span></div>
+<div class="settings-row"><span class="setting-name">Silver Bullet (10–11 AM EST)</span><span class="setting-default">Off</span><span class="setting-desc">Enable for the ICT Silver Bullet setup window. Combine with FVG Scanner alerts.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>Forex (all major and minor pairs), indices, crypto. Most valuable on timeframes where session opens are visible as distinct events: 1m, 5m, 15m for intraday work. The kill zone shading is most useful on 5m–15m charts where you can see price action within each window.</p>
+
+<h2>Recommended Setup</h2>
+<p>Enable London Kill Zone, NY Kill Zone, and Midnight Open as a minimum. Set hourly opens to 8 to cover the NY session. If you trade the London breakout, also enable the Asian Range to see the consolidation level being targeted. Use alongside the FVG Scanner — FVGs that form within kill zones are the core ICT intraday setup. Add Silver Bullet if you specifically trade the 10–11 AM window.</p>
+<div class="blog-cta mt-lg"><h3>Get Access to Session & Hourly Opens</h3><p>Available on the Pro plan and above.</p><a href="https://whop.com/ict-edge-indicators/pro-plan-c2/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>
 </main>
 <footer role="contentinfo" class="site-footer"><div class="footer-inner"><div class="footer-brand"><a href="../" class="nav-logo"><span class="logo-icon">IE</span> ICT Edge</a><p>Professional ICT indicators for TradingView.</p></div></div><div class="footer-bottom"><p>&copy; 2026 ICT Edge Indicators. Trading involves risk. <a href="../privacy.html" style="color:rgba(255,255,255,.5)">Privacy</a> · <a href="../terms.html" style="color:rgba(255,255,255,.5)">Terms</a> · <a href="../risk.html" style="color:rgba(255,255,255,.5)">Risk</a></p></div></footer><script src="../assets/js/core.js"></script><script src="../cookie-consent.js"></script>
-<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/ict-kill-zones-guide.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">Kill Zones Guide</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">Understanding ICT kill zones and session timing</span></p></div>
+<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/ict-kill-zones-guide.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">ICT Kill Zones Guide</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">How to trade the high-probability session windows</span></p></div>
 <!-- Freelance Dev Promo -->
 <div style="background:#111827;border-top:1px solid #1e293b;padding:14px 24px;text-align:center;font-family:-apple-system,system-ui,sans-serif;font-size:13px;">
   <span style="color:#94a3b8;">Need a developer?</span>

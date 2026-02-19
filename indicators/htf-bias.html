@@ -68,25 +68,55 @@
 <div class="ind-hero"><span class="indicator-tier tier-pro" style="margin-bottom:16px;display:inline-block">Pro</span><h1>Higher Timeframe Bias</h1><p>Multi-timeframe trend filter using market structure shifts and breaks of structure for directional bias.</p>
         <time datetime="2026-02" class="sr-only">Last updated February 2026</time></div>
 <div class="ind-content">
-<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — Higher Timeframe Bias on EUR/USD 15m</span></div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Key Features</h2>
-<div class="feature-list"><div class="feature-list-item"><div class="icon">✦</div><div><h4>Market Structure</h4><p>Swing highs/lows, BOS and MSS on higher timeframes</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Colour-Coded Bias</h4><p>Background or candle colouring for current HTF direction</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Structure Labels</h4><p>Where BOS and MSS occurred on the HTF</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Dashboard Overlay</h4><p>Current bias for up to 4 timeframes simultaneously</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Bias Shifts</h4><p>Clear visual when HTF bias changes</p></div></div>
-<div class="feature-list-item"><div class="icon">✦</div><div><h4>Bias Alerts</h4><p>Alert on bullish/bearish bias shifts</p></div></div>
+<div class="ind-screenshot"><span class="placeholder">📊 Chart screenshot — HTF Bias dashboard on EUR/USD 15m</span></div>
+
+<h2>Why Multi-Timeframe Bias Matters</h2>
+<p>In ICT methodology, trading against the higher timeframe trend is one of the most common mistakes. You might identify a perfect 5-minute bullish order block — but if the 1-hour and 4-hour are in a bearish structure, that setup is low-probability. HTF bias alignment is not optional; it's the filter that separates high-probability setups from noise.</p>
+<p>This indicator tracks market structure shifts (MSS) and breaks of structure (BOS) across up to four timeframes simultaneously, displaying the resulting bias as a colour-coded chart background and a real-time dashboard — all without leaving your current chart.</p>
+
+<h2>Key Features</h2>
+<div class="feature-list">
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Multi-Timeframe Structure Analysis</h4><p>Monitors up to four configurable timeframes simultaneously. Default configuration: 1H, 4H, Daily, and Weekly. Detects Breaks of Structure (BOS) and Market Structure Shifts (MSS) on each timeframe independently, updating in real time as new bars close.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>BOS and MSS Labels</h4><p>Clearly labels every Break of Structure and Market Structure Shift on each monitored timeframe. BOS indicates continuation; MSS indicates a potential trend change. Seeing MSS on 1H while 4H remains bullish is an early warning of possible reversal — critical context for trade management.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Bias Background Colouring</h4><p>Colours the chart background based on the current bias of your chosen source timeframe. Bullish bias = green tint, bearish bias = red tint, ranging = grey. Provides instant visual confirmation of direction without needing to read the dashboard.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Real-Time Dashboard</h4><p>A compact dashboard showing current bias (Bullish/Bearish/Ranging) for each of the four monitored timeframes simultaneously. Positioned at a corner of your chart (configurable). At a glance you can see full timeframe alignment — all four green means maximum directional confidence.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Candle Colouring Mode</h4><p>Alternative to background colouring — colours individual candles based on HTF bias instead of the background. Useful if you prefer to keep the chart background neutral while still seeing directional context on price bars.</p></div></div>
+<div class="feature-list-item"><div class="icon">✦</div><div><h4>Swing Point Overlay</h4><p>Optional display of the swing highs and lows used for structure analysis. Showing swing points helps you understand exactly which levels the indicator is using to determine BOS and MSS — valuable during learning or when verifying signals.</p></div></div>
 </div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Configurable Settings</h2>
-<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;color:var(--ink-secondary);font-size:.9rem;line-height:1.7">Source timeframes (4), swing sensitivity, BOS/MSS distinction, colour mode, dashboard position</div>
-<h2 style="font-family:var(--heading);font-size:1.3rem;font-weight:800;margin:32px 0 16px">Works On</h2>
-<p style="color:var(--ink-secondary);line-height:1.8">All markets, all timeframes. Most powerful on 1m-15m with 1H/4H/Daily bias.</p>
+
+<h2>Settings Reference</h2>
+<div class="settings-table">
+<div class="settings-group"><div class="settings-group-title">Timeframes</div>
+<div class="settings-row"><span class="setting-name">Timeframe 1–4</span><span class="setting-default">1H, 4H, D, W</span><span class="setting-desc">The four timeframes to monitor. Customise to your trading style. Scalpers: 15m, 1H, 4H, D. Swing traders: 4H, D, W. Each can be toggled independently.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Structure Detection</div>
+<div class="settings-row"><span class="setting-name">Swing Length</span><span class="setting-default">5</span><span class="setting-desc">Pivot lookback/lookahead length for swing detection. Lower values (3–4) detect more swings but create more noise. Higher values (7–10) detect only major structure swings — better for swing trading.</span></div>
+<div class="settings-row"><span class="setting-name">Show BOS Labels</span><span class="setting-default">On</span><span class="setting-desc">Displays "BOS" labels on breaks of structure for each monitored timeframe.</span></div>
+<div class="settings-row"><span class="setting-name">Show MSS Labels</span><span class="setting-default">On</span><span class="setting-desc">Displays "MSS" labels on market structure shifts — the more significant signal indicating potential trend change.</span></div>
+<div class="settings-row"><span class="setting-name">Show Swing Points</span><span class="setting-default">Off</span><span class="setting-desc">Enable to see the actual swing highs and lows used for analysis. Useful for learning or verifying signals.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Visualisation</div>
+<div class="settings-row"><span class="setting-name">Bias Display Mode</span><span class="setting-default">Background</span><span class="setting-desc">Background (colours chart fill), Candles (colours price bars), or None (dashboard only).</span></div>
+<div class="settings-row"><span class="setting-name">Bias Source</span><span class="setting-default">TF1 (1H)</span><span class="setting-desc">Which timeframe drives the visual background/candle colouring. Typically set one timeframe above your execution chart.</span></div>
+</div>
+<div class="settings-group"><div class="settings-group-title">Dashboard</div>
+<div class="settings-row"><span class="setting-name">Show Dashboard</span><span class="setting-default">On</span><span class="setting-desc">The multi-timeframe bias summary panel. Recommended on at all times.</span></div>
+<div class="settings-row"><span class="setting-name">Dashboard Position</span><span class="setting-default">Top Right</span><span class="setting-desc">Top Right, Top Left, Bottom Right, or Bottom Left. Choose the corner least likely to overlap key price action.</span></div>
+<div class="settings-row"><span class="setting-name">Dashboard Size</span><span class="setting-default">Normal</span><span class="setting-desc">Small, Normal, or Large. Use Small on lower timeframe charts with less screen real estate.</span></div>
+</div>
+</div>
+
+<h2>Works On</h2>
+<p>All markets — forex, indices, crypto, commodities, equities. Market structure analysis is universal. Most valuable as a filter for decisions made on lower timeframe execution charts. Works on any timeframe; the monitored timeframes are independent of which chart you're viewing.</p>
+
+<h2>Recommended Setup</h2>
+<p>Set the four timeframes to match your trading style. For intraday ICT trading: 15m, 1H, 4H, Daily. Set Bias Source to TF2 (1H) so the background reflects 1H bias while you trade the 15m. Enable both BOS and MSS labels. Only take bullish setups when TF2 and TF3 are both bullish — this is the core bias alignment rule in ICT. When TF3 and TF4 align with TF1 and TF2, setups become the highest conviction. Combine with the FVG Scanner and Order Blocks for a complete top-down ICT workflow.</p>
 <div class="blog-cta mt-lg"><h3>Get Access to Higher Timeframe Bias</h3><p>Available on the Pro plan and above.</p><a href="https://whop.com/ict-edge-indicators/pro-plan-c2/" target="_blank">Subscribe on Whop →</a></div>
 </div>
 <div style="margin:24px auto;max-width:680px;padding:16px 20px;background:rgba(56,189,248,.04);border:1px solid rgba(56,189,248,.12);border-radius:8px;text-align:center;font-size:.78rem;line-height:1.6;color:var(--ink-muted);" role="note" aria-label="Regulatory disclaimer"><strong style="color:var(--ink-secondary);">⚠️ Important:</strong> ICT Edge Indicators provides technical analysis tools only. We are not authorised or regulated by the Financial Conduct Authority (FCA). Our products do not constitute financial advice. Trading involves significant risk of loss — past performance is not indicative of future results. <a href="../risk.html" style="color:var(--accent);text-decoration:underline;">Read full risk disclosure →</a></div>
 </main>
 <footer role="contentinfo" class="site-footer"><div class="footer-inner"><div class="footer-brand"><a href="../" class="nav-logo"><span class="logo-icon">IE</span> ICT Edge</a><p>Professional ICT indicators for TradingView.</p></div></div><div class="footer-bottom"><p>&copy; 2026 ICT Edge Indicators. Trading involves risk. <a href="../privacy.html" style="color:rgba(255,255,255,.5)">Privacy</a> · <a href="../terms.html" style="color:rgba(255,255,255,.5)">Terms</a> · <a href="../risk.html" style="color:rgba(255,255,255,.5)">Risk</a></p></div></footer><script src="../assets/js/core.js"></script><script src="../cookie-consent.js"></script>
-<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/htf-bias-trading-guide.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">HTF Bias Guide</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">How to use higher timeframe bias in your trading</span></p></div>
+<div style="margin:1.5rem 0;padding:1rem;background:var(--bg-secondary,#161b22);border:1px solid var(--border,#21262d);border-radius:8px;text-align:center;"><p style="margin:0;font-size:0.9rem;"><span style="color:var(--text-secondary,#8b949e);">&#128214; Related:</span> <a href="../blog/htf-bias-trading-guide.html" style="color:var(--accent,#f59e0b);text-decoration:none;font-weight:500;">HTF Bias Guide</a> &#8212; <span style="color:var(--text-secondary,#8b949e);">How to read market structure for directional bias</span></p></div>
 <!-- Freelance Dev Promo -->
 <div style="background:#111827;border-top:1px solid #1e293b;padding:14px 24px;text-align:center;font-family:-apple-system,system-ui,sans-serif;font-size:13px;">
   <span style="color:#94a3b8;">Need a developer?</span>
