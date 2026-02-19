@@ -169,7 +169,7 @@ body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:no
 .feature-list-item p { font-size: .82rem; color: var(--ink-secondary); }
 
 /* ── Blog ── */
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.blog-grid { padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
 .blog-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; text-decoration: none; color: var(--ink); transition: all .25s; }
 .blog-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-glow); }
 .blog-tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 12px; }
